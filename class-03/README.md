@@ -1,6 +1,7 @@
 # Class 3: Maps, Primitives, and File I/O
 
 ## Agenda
+- **For Attendence, you must submit your lab on Friday**
 - Welcome, announcements
 - Code review
 - Daily systems: Absolute and Relative Paths
