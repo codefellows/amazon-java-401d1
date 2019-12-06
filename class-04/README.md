@@ -1,10 +1,9 @@
 # Class 4: Object Oriented Programming
 
 ## Agenda
+
 - Announcements
-  - Partner Power Hour is tomorrow, is required! Please attend well.
-- Code review
-- Daily systems: Directories & Files
+  - Today, and the next 4 Fridays I will be teaching another class in the afternoon
 - Warmup questions
 - Lecture
   - Building classes
@@ -16,6 +15,8 @@
 - Lab intro
   - The Whiteboarding Rubric
   - Whiteboarding, Revisited
+- Code review
+- Daily systems: Directories & Files
 
 ## OOP Warmup
 
@@ -28,6 +29,7 @@
 Java is an object-oriented language, which means that it organizes *everything* in terms of classes and instances. Today, we'll dive deep into what classes are, how they work, how they relate to JavaScript constructors, and how we use them.
 
 ### Java Data Modeling
+
 Data modeling in Java is the
 process of taking a real world or conceptual idea and encoding it into
 Java's built in data-types. There isn't technically a right or wrong way to
@@ -51,6 +53,7 @@ When we write a class in Java, the things we need to know are the same as in Jav
 In JavaScript, you also saw that there were sometimes data and behavior that applied, not to a specific instance, but to the constructor or to the class as a whole. For example, we would create variables like `Image.sortBy()` that contained a method that wasn't about a specific `Image` instance, but instead was a useful piece of functionality that applied to the class more generally. In Java, we call these "class methods" and "class variables", and the way you can tell them apart from instance methods/variables is the presence of the word `static`. Class vars/methods have the word `static` in the declaration; instance vars/methods don't.
 
 Let's practice with some examples you may have seen in the past:
+
 - stores that sell cookies
 - books and authors
 
@@ -59,12 +62,15 @@ Let's practice with some examples you may have seen in the past:
 You probably know that everything in the computer is stored in 0s and 1s. As web developers, we don't often have to work with data at such a low level; instead we get to work with Strings, numbers, Arrays, Maps, and so on. In Java, though, we sometimes have to deal more with the exact details of how data is stored on the computer. There are predefined specifications for how to decode number and strings from binary. The majority of the data we work with is made up of numbers and Strings. For example, numbers and Strings are used to make more complex things like JSON, XML, HTML, JPEG, GIF, MP3, MP4, and even Javascript. Understanding how to manipulate binary data on a more fundamental level can open up doors for having much more control over the data in our applications.
 
 ### Bytes
+
 A byte is 8 zeros and ones `00101101`. Bytes are one of the fundamental units that programmers use to work with binary data. A byte can hold one ascii character, a number between 0 and 255, a number between -128 and 127, along with anything else that has up to 256 units.
 
 ### Strings
+
 Strings are made from an array of characters. Every byte in a binary file can be decoded as a character using the `ascii` or `utf8` character specifications. The ASCII standard has been around since the early sixties, and was used to encode characters of a single locale (language). It is literally a map between numbers 0 to 127 and specific characters. Meaning that when you find the number 97 in a byte, that byte can also be decoded as the letter 'a'. This only works by making computers and programers conform to the specification. As computers gained more memory and found reasons to support more character sets, the `utf8` specification was created. UTF8 is a variable length byte encoding that allows bytes to be chained together to form a character set large enough to support every locale, symbols, and emoji at once. UTF8 was designed as a superset of ASCII in order keep backwards compatibility.
 
 ### ASCII Table
+
 ```
   0 nul    1 soh    2 stx    3 etx    4 eot    5 enq    6 ack    7 bel
   8 bs     9 ht    10 nl    11 vt    12 np    13 cr    14 so    15 si
@@ -85,9 +91,10 @@ Strings are made from an array of characters. Every byte in a binary file can be
 ```
 
 ### Integers
+
 In order to understand how integers are encoded in zeros and ones, it is important to understand how decimal notation works. In decimal notation, every digit is worth itself times ten to the power of its place. In binary this only changes slightly, every digit is worth itself times **TWO** to the power of its place. Integers can either be decoded as `signed` or `unsigned`. Signed numbers can be negative or positive, and unsigned numbers can only be positive.
 
-```
+``` text
 HOW DECMAL WORKS...
 
 places_exp    4 3 2 1 0
@@ -116,9 +123,10 @@ value         0 1 0 1 1
 ```
 
 ### Signed vs Unsigned
+
 Signed integers add a rule that states the first bit represents weather or not a number is positive or negative. Negative values then follow a rule called `twos compliment`. In twos compliment, the value after the signed bit is added to the number of positions supported by the the remaining bits and then multiplied by -1. When decoding a four bit signed number, the first bit is a boolean value indicating negative or positive. The remaining three can support 8 unique values (0-7). So a signed four bit number can represent positive numbers from 0 to 7 and negative numbers -1 to -8.
 
-```
+``` text
 Signed |Unsigned
 -----------------.
  0     |0        |0000
@@ -140,6 +148,7 @@ Signed |Unsigned
 ```
 
 ### Hex Cheat Sheet
+
 ``` text
 DEC |HEX |BIN
 --------------
