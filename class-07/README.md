@@ -50,6 +50,7 @@
     }
     ArrayHolder arrayHolder = new ArrayHolder();
     int[] numsABC = arrayHolder.permaNums;
+    int[] numsABC = {1,2,3,4};
     ArrayHolder.permaNums = new int[]{9,9,9,9};
     ```
 
