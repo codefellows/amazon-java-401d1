@@ -43,6 +43,15 @@
     int[] moreNums = nums;
     nums = new int[]{6,7,8,9};
     System.out.println(moreNums[0]);
+    
+    class ArrayHolder {
+    int[] permaNums = new int[]{1,2,3,4};
+    public ArrayHolder(){};
+    }
+    ArrayHolder arrayHolder = new ArrayHolder();
+    int[] numsABC = arrayHolder.permaNums;
+    int[] numsABC = {1,2,3,4};
+    ArrayHolder.permaNums = new int[]{9,9,9,9};
     ```
 
 7. Why does that make any sense?
