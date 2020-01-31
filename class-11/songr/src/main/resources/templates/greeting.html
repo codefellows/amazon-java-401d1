@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>This is the greeting page</h1>
+
+    <h2 th:text="${userGreeting}"></h2>
+    <p th:if="${greeting}" th:text="${greeting}"></p>
+    <p th:unless="${greeting}">Yo homeslice, wanna grab a pizza</p>
+</body>
+</html>

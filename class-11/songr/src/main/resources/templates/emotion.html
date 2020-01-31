@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Our Emotions</h1>
+    <table>
+        <tr><th>Emotion</th><th>Why</th><th>Who</th></tr>
+        <tr th:each="emotion : ${emotionsArr}">
+            <td th:text="${emotion.feeling}"></td>
+            <td th:text="${emotion.why}"></td>
+            <td th:text="${emotion.personWhoHasIt}"></td>
+        </tr>
+    </table>
+</body>
+</html>
