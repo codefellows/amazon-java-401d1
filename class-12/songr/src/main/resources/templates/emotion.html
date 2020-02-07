@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Our Emotions</h1>
+
+<!--    public String feeling;
+    String personWhoHasIt;
+    String why;
+    Date whenIFeltIt;
+    alt + j is multiselect in intellij-->
+    <form action="/emotionsAddPotato" method="POST">
+        feeling : <input type="text" name="feeling">
+        person : <input type="text" name="person">
+        why : <input type="text" name="why">
+        whenIFeltIt : <input type="date" name="whenIFeltIt">
+        <input type="submit" value="have emotion">
+    </form>
+
+    <table>
+        <tr><th>Emotion</th><th>Why</th><th>Who</th></tr>
+        <tr th:each="emotion : ${emotionsArr}">
+            <td th:text="${emotion.feeling}"></td>
+            <td th:text="${emotion.why}"></td>
+            <td th:text="${emotion.personWhoHasIt}"></td>
+            <td th:text="${emotion.whenIFeltIt}"></td>
+        </tr>
+    </table>
+</body>
+</html>
