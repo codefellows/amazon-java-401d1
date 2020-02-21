@@ -7,8 +7,3 @@
 - Code review
   - Deployment!
 - Lecture
-  - What Are Trees, vocab words
-  - Tree traversals & recursion
-  - Binary Search Trees
-  - if time: balance
-  - if time: passwords
