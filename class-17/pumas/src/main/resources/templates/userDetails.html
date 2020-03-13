@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="/">home</a></li>
+            <li><a href="/login">login</a></li>
+            <li><a href="/logout">logout</a></li>
+            <li><a href="/users/7">some user</a></li>
+        </ul>
+    </nav>
+    <h1>[[${usernameWeAreVisiting}]]'s Page</h1>
+    <h2>Welcome to the page, [[${loggedInUserName}]] its so nice to have a guest</h2>
+    <form action="/adoption" method="POST">
+        <fieldset>
+            <legend>Adopt a puma</legend>
+            first <input type="text" name="firstName">
+            last <input type="text" name="lastName">
+            <input type="color" name="color">
+            age <input type="number" name="age">
+            domestic? <input type="checkbox" name="domesticated">
+            <input type="submit" value="adopt a puma">
+        </fieldset>
+
+    </form>
+
+    <ul>
+        <li th:each="puma : pumas" th:style="'background-color:' + ${puma.color}">
+            [[${puma.firstName}]] [[${puma.lastName}]]
+        </li>
+    </ul>
+
+    <img src="/potato/scooby.png">
+
+
+</body>
+</html>
