@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ice creams</title>
+</head>
+<body>
+    <h1>Ice Cream</h1>
+    <form action="/icecream" method="post">
+        <input type="text" name="flavor">
+        <input type="submit">
+    </form>
+
+    <ul>
+        <li th:each="icecream :${iceCreamArray}" th:text="${icecream.flavor}"></li>
+    </ul>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ice cream</title>
+</head>
+<body>
+    <h1>Ice Cream</h1>
+    <p>welcome to the ice cream site [[${username}]]</p>
+    <form action="/users" method="POST">
+        name <input type="text" name = "username">
+        pass <input type="password" name = "password">
+        <input type="submit" value="new user">
+    </form>
+
+    <form action="/login" method="POST">
+        name <input type="text" name = "username">
+        pass <input type="password" name = "password">
+        <input type="submit" value="login">
+    </form>
+</body>
+</html>
